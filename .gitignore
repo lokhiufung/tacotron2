@@ -1,0 +1,11 @@
+__pycache__/
+*/__pycache__/
+
+.vscode/
+.ipynb_checkpoints/
+
+# customize
+pretrain_model/
+training/
+test.py
+

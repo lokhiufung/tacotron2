@@ -407,7 +407,7 @@ class Decoder(nn.Module):
             mel_output, gate_output, attention_weights = self.decode(
                 decoder_input)
             mel_outputs += [mel_output.squeeze(1)]
-            gate_outputs += [gate_output.squeeze()]
+            gate_outputs += [gate_output.squeeze(1)]  # BUG: fixed by: https://github.com/NVIDIA/tacotron2/issues/170#issuecomment-523506610
             alignments += [attention_weights]
 
         mel_outputs, gate_outputs, alignments = self.parse_decoder_outputs(
