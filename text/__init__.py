@@ -9,7 +9,7 @@ _symbol_to_id = {s: i for i, s in enumerate(symbols)}
 _id_to_symbol = {i: s for i, s in enumerate(symbols)}
 
 # Regular expression matching text enclosed in curly braces:
-_curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
+_curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')  # this is for matching phonetic sequence that represents the pronouciation of words
 
 
 def text_to_sequence(text, cleaner_names):

@@ -56,7 +56,7 @@ def expand_numbers(text):
 def lowercase(text):
   return text.lower()
 
-
+# collapse multiple whitespace into single white space
 def collapse_whitespace(text):
   return re.sub(_whitespace_re, ' ', text)
 

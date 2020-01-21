@@ -1,7 +1,7 @@
 import tensorflow as tf
 from text import symbols
 
-LANG = 'cantonese'
+LANG = 'mandarin'
 def create_hparams(hparams_string=None, verbose=False):
     """Create model hyperparameters. Parse nondefault from given string."""
 
@@ -9,7 +9,7 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Experiment Parameters        #
         ################################
-        epochs=10,
+        epochs=50,
         iters_per_checkpoint=1000,
         seed=1234,
         dynamic_loss_scaling=True,
