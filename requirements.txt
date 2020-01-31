@@ -12,3 +12,7 @@ pillow
 # cantonese jyutping
 jyutping
 pinyin_jyutping_sentence
+
+# mandarin pypinyin, opencc
+pinyin
+# opencc-python-reimplemented
