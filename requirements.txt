@@ -11,3 +11,4 @@ pillow
 
 # cantonese jyutping
 jyutping
+pinyin_jyutping_sentence
