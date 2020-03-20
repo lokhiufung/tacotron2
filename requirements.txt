@@ -9,5 +9,9 @@ Unidecode==1.0.22
 pillow
 
 
-# cantonese jyutping
-jyutping
+# cantonese jyutping: install frin source instead
+# jyutping  
+
+# mandarin pypinyin, opencc
+pinyin
+# opencc-python-reimplemented

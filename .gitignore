@@ -7,6 +7,9 @@ __pycache__/
 # customize
 pretrain_model/
 training/
+training-remarks/
 test.py
 training-remarks
+python-jyutping
 
+results.txt

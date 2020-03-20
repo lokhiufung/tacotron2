@@ -15,8 +15,8 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
 import re
 from unidecode import unidecode
 from .numbers import normalize_numbers
-
-
+from .cantonese import convert_to_jyutping
+from .mandarin import convert_to_pinyin
 # Regular expression matching whitespace:
 _whitespace_re = re.compile(r'\s+')
 
@@ -87,4 +87,12 @@ def english_cleaners(text):
   text = expand_numbers(text)
   text = expand_abbreviations(text)
   text = collapse_whitespace(text)
+  return text
+
+def cantonese_cleaners(text):
+  text = convert_to_jyutping(text)
+  return text
+
+def mandarin_cleaners(text):
+  text = convert_to_pinyin(text)
   return text

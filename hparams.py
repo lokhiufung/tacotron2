@@ -1,7 +1,8 @@
 import tensorflow as tf
 from text import symbols
 
-LANG = 'mandarin'
+LANG = 'cantonese'
+DATASET_NAME = 'synthetic_data'
 def create_hparams(hparams_string=None, verbose=False):
     """Create model hyperparameters. Parse nondefault from given string."""
 
@@ -25,15 +26,15 @@ def create_hparams(hparams_string=None, verbose=False):
         # Data Parameters             #
         ################################
         load_mel_from_disk=False,
-        training_files='/home/lokhiufung/data/{}/train_tacotron2.txt'.format(LANG),
-        validation_files='/home/lokhiufung/data/{}/dev_tacotron2.txt'.format(LANG),
-        text_cleaners=['transliteration_cleaners'],
+        training_files='/home/lokhiufung/data/{}/training/{}/train_tacotron2.txt'.format(LANG, DATASET_NAME),
+        validation_files='/home/lokhiufung/data/{}/training/{}/dev_tacotron2.txt'.format(LANG, DATASET_NAME),
+        text_cleaners=['cantonese_cleaners'],
 
         ################################
         # Audio Parameters             #
         ################################
         max_wav_value=32768.0,
-        sampling_rate=16000,
+        sampling_rate=22050,
         filter_length=1024,
         hop_length=256,
         win_length=1024,
@@ -56,7 +57,7 @@ def create_hparams(hparams_string=None, verbose=False):
         n_frames_per_step=1,  # currently only 1 is supported
         decoder_rnn_dim=1024,
         prenet_dim=256,
-        max_decoder_steps=1000,
+        max_decoder_steps=2000,
         gate_threshold=0.5,
         p_attention_dropout=0.1,
         p_decoder_dropout=0.1,

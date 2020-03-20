@@ -8,7 +8,7 @@ from text import cmudict
 
 _pad        = '_'
 _punctuation = '!\'(),.:;? '
-_special = '-'
+_special = '-%'
 _letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 _numbers = '0123456789'  # number added
 # Prepend "@" to ARPAbet symbols to ensure uniqueness (some are the same as uppercase letters):
